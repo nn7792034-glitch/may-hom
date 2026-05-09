@@ -7,7 +7,7 @@
 
 <style>
 
-body{
+<body onload="checkPassword()">
 margin:0;
 font-family:Tahoma;
 background:#111;
@@ -78,5 +78,21 @@ cursor:pointer;
 
 </div>
 
-</body>
+<script>
+
+function checkPassword(){
+
+let password = prompt("أدخل كلمة سر الأدمن");
+
+if(password !== "1234"){
+
+alert("كلمة السر غير صحيحة");
+
+window.location.href="index.html";
+
+}
+
+}
+
+</script>
 </html>
