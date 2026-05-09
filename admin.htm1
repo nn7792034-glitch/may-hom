@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>لوحة التحكم</title>
 
 <style>
+
 body{
+margin:0;
+padding:0;
 font-family:Tahoma;
 background:#111;
 color:white;
-margin:0;
-padding:0;
 }
 
 .topbar{
 background:#00bcd4;
-padding:15px;
+padding:20px;
 text-align:center;
-font-size:24px;
+font-size:25px;
 font-weight:bold;
 }
 
@@ -34,52 +37,59 @@ margin-bottom:20px;
 text-align:center;
 }
 
+.balance{
+font-size:40px;
+color:#00ff99;
+margin-top:10px;
+}
+
 button{
 width:100%;
 padding:15px;
+margin-top:10px;
 border:none;
 border-radius:10px;
 background:#00bcd4;
 color:white;
 font-size:18px;
-margin-top:10px;
 cursor:pointer;
 }
 
-.balance{
-font-size:35px;
-color:#00ff99;
-margin-top:10px;
-}
 </style>
+
 </head>
 
 <body>
 
 <div class="topbar">
-لوحة تحكم المنصة
+لوحة التحكم
 </div>
 
 <div class="container">
 
 <div class="card">
+
 <h2>مرحبا بك</h2>
+
 <p>رصيدك الحالي</p>
-<div class="balance">$5000</div>
+
+<div class="balance">
+$5000
+</div>
+
 </div>
 
 <div class="card">
-<h3>الخيارات</h3>
 
-<button onclick="alert('تم فتح قسم السحب')">
+<button onclick="alert('قسم السحب')">
 السحب
 </button>
 
-<button onclick="alert('تم فتح قسم الإيداع')">
+<button onclick="alert('قسم الإيداع')">
 الإيداع
 </button>
 
-<button onclick="alert('تم فتح قسم الأرباح')">
+<button onclick="alert('قسم الأرباح')">
 الأرباح
 </button>
 
