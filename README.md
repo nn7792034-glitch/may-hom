@@ -1,1 +1,123 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<title>May Hom</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Tahoma;
+background:linear-gradient(135deg,#111,#1e3c72);
+color:white;
+text-align:center;
+}
+
+.container{
+margin-top:120px;
+}
+
+h1{
+font-size:50px;
+}
+
+p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+border:none;
+border-radius:10px;
+background:#00bfff;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:#009acd;
+}
+
+.lang{
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 id="title">مرحباً بك في منصة May Hom</h1>
+
+<p id="text">منصة احترافية متعددة اللغات</p>
+
+<button>تسجيل الدخول</button>
+
+<button>إنشاء حساب</button>
+
+<div class="lang">
+
+<button onclick="setArabic()">العربية</button>
+
+<button onclick="setEnglish()">English</button>
+
+<button onclick="setKurdish()">کوردی</button>
+
+</div>
+
+</div>
+
+<script>
+
+function setArabic(){
+
+document.documentElement.lang="ar";
+document.documentElement.dir="rtl";
+
+document.getElementById("title").innerHTML=
+"مرحباً بك في منصة May Hom";
+
+document.getElementById("text").innerHTML=
+"منصة احترافية متعددة اللغات";
+
+}
+
+function setEnglish(){
+
+document.documentElement.lang="en";
+document.documentElement.dir="ltr";
+
+document.getElementById("title").innerHTML=
+"Welcome to May Hom";
+
+document.getElementById("text").innerHTML=
+"Professional multilingual platform";
+
+}
+
+function setKurdish(){
+
+document.documentElement.lang="ku";
+document.documentElement.dir="rtl";
+
+document.getElementById("title").innerHTML=
+"بەخێربێیت بۆ May Hom";
+
+document.getElementById("text").innerHTML=
+"پلاتفۆڕمی پیشەیی فرەزمان";
+
+}
+
+</script>
+
+</body>
+</html>
