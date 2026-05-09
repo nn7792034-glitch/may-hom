@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+<meta charset="UTF-8">
+<title>May Hom</title>
+</head>
+
+<body style="font-family:Tahoma; text-align:center;">
+
+<h1 id="title">مرحباً بك في منصة May Hom</h1>
+
+<p id="text">منصة تسجيل الدخول والاشتراكات</p>
+
+<button onclick="setArabic()">العربية</button>
+
+<button onclick="setEnglish()">English</button>
+
+<button onclick="setKurdish()">کوردی</button>
+
+<script>
+
+function setArabic() {
+document.documentElement.lang = "ar";
+document.documentElement.dir = "rtl";
+
+document.getElementById("title").innerHTML =
+"مرحباً بك في منصة May Hom";
+
+document.getElementById("text").innerHTML =
+"منصة تسجيل الدخول والاشتراكات";
+}
+
+function setEnglish() {
+document.documentElement.lang = "en";
+document.documentElement.dir = "ltr";
+
+document.getElementById("title").innerHTML =
+"Welcome to May Hom";
