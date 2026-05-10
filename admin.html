@@ -86,11 +86,62 @@ $5000
 </div>
 <div class="packages">
 <div class="card">
-
+<input id="image" placeholder="رابط الصورة">
 <h2>إضافة باقة جديدة</h2>
+<script>
+function addPackage() {
 
+  let name = document.getElementById("name").value;
+  let price = document.getElementById("price").value;
+  let daily = document.getElementById("daily").value;
+  let image = document.getElementById("image").value;
+
+  let packages = JSON.parse(localStorage.getItem("packages")) || [];
+
+  packages.push({
+    name: name,
+    price: price,
+    daily: daily,
+    image: image
+  });
+
+  localStorage.setItem("packages", JSON.stringify(packages));
+<div id="packages"></div>
+
+<script>
+let packages = JSON.parse(localStorage.getItem("packages")) || [];
+
+let container = document.getElementById("packages");
+
+packages.forEach(pkg => {
+
+  container.innerHTML += `
+    <div class="card">
+
+      <img src="${pkg.image}" 
+      style="width:100%;height:180px;border-radius:15px;object-fit:cover;">
+
+      <h2>${pkg.name}</h2>
+      <p>${pkg.price}$</p>
+      <p>ربح يومي ${pkg.daily}$</p>
+
+    </div>
+  `;
+});
+</script>
+  alert("تمت إضافة الباقة");
+}
+</script>
 <input type="text" id="name" placeholder="اسم الباقة">
-
+<style>
+.card{
+  background:#111;
+  padding:15px;
+  border-radius:15px;
+  margin:15px;
+  color:white;
+}
+</style>
 <input type="number" id="price" placeholder="سعر الباقة">
 
 <input type="number" id="profit" placeholder="الربح اليومي">
